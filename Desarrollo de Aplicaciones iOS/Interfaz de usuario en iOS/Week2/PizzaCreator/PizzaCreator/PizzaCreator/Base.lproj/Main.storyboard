@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UPU-rx-JIw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tamaño-->
+        <scene sceneID="7kn-5O-WZ2">
+            <objects>
+                <viewController id="AKT-i3-IoD" customClass="TamanioViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXn-f2-VEv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lAG-R2-LWt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fg6-Ba-wKo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-Pm-eP1">
+                                <rect key="frame" x="140" y="114" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AKT-i3-IoD" id="SAh-ZU-eGa"/>
+                                    <outlet property="delegate" destination="AKT-i3-IoD" id="HbO-0Q-6bN"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Bo-Pm-eP1" firstAttribute="top" secondItem="xXn-f2-VEv" secondAttribute="bottom" constant="50" id="MyW-hJ-pt8"/>
+                            <constraint firstItem="6Bo-Pm-eP1" firstAttribute="centerX" secondItem="Fg6-Ba-wKo" secondAttribute="centerX" id="zAt-l9-odF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tamaño" id="ZD5-Xb-Vq8">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="Yle-hn-JSF">
+                            <connections>
+                                <segue destination="wnP-Qm-WyU" kind="show" id="8Xb-CZ-0Ib"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="6Bo-Pm-eP1" id="uAX-WL-1yU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dl2-K1-cim" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RpH-Xc-FSE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UPU-rx-JIw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ju0-3q-I9U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AKT-i3-IoD" kind="relationship" relationship="rootViewController" id="jEi-SN-0hK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wc7-yd-vS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="372"/>
+        </scene>
+        <!--Masa-->
+        <scene sceneID="nFX-if-5UK">
+            <objects>
+                <viewController id="wnP-Qm-WyU" customClass="MasaViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dgL-AY-Lgd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZMU-bY-bDP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h3b-H8-PKT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOt-lJ-4PK">
+                                <rect key="frame" x="140" y="114" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wnP-Qm-WyU" id="OqF-6v-WMb"/>
+                                    <outlet property="delegate" destination="wnP-Qm-WyU" id="LGP-hH-3Q2"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mOt-lJ-4PK" firstAttribute="top" secondItem="dgL-AY-Lgd" secondAttribute="bottom" constant="50" id="Hif-7u-d8L"/>
+                            <constraint firstItem="mOt-lJ-4PK" firstAttribute="centerX" secondItem="h3b-H8-PKT" secondAttribute="centerX" id="niN-xl-sEE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Masa" id="qnc-Eo-9RI">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="rpU-9a-5bi">
+                            <connections>
+                                <segue destination="F89-wN-gIs" kind="show" id="tYt-tB-rIy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="picker" destination="mOt-lJ-4PK" id="bGJ-ZX-vqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5j-Pf-QqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="372"/>
+        </scene>
+        <!--Queso-->
+        <scene sceneID="rvh-gM-Rgh">
+            <objects>
+                <viewController id="F89-wN-gIs" customClass="CheeseViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nSf-p1-9YW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qxE-Do-yBx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mGx-ph-iuz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWr-ia-YK9">
+                                <rect key="frame" x="140" y="107" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="F89-wN-gIs" id="yJI-mN-qYr"/>
+                                    <outlet property="delegate" destination="F89-wN-gIs" id="QjH-ps-ZeD"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XWr-ia-YK9" firstAttribute="top" secondItem="nSf-p1-9YW" secondAttribute="bottom" constant="43" id="F3S-ek-XU2"/>
+                            <constraint firstItem="XWr-ia-YK9" firstAttribute="centerX" secondItem="mGx-ph-iuz" secondAttribute="centerX" id="NLQ-Bs-Ybu"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Queso" id="5oA-aN-V7E">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="HsV-Ql-8rj">
+                            <connections>
+                                <segue destination="zKd-qt-oE0" kind="show" id="44I-A5-1Cl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="XWr-ia-YK9" id="7Ok-rJ-DHv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxI-eP-clL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="364"/>
+        </scene>
+        <!--Ingredientes-->
+        <scene sceneID="qHJ-2M-DrA">
+            <objects>
+                <viewController id="zKd-qt-oE0" customClass="IngredientesViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sTv-ss-mQ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lc9-Ir-D2C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BVW-LP-aGj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JfS-uR-k9R">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="ys5-dg-zH3" style="IBUITableViewCellStyleDefault" id="nBA-AV-cYm">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nBA-AV-cYm" id="0zH-1Q-LFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ys5-dg-zH3">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zKd-qt-oE0" id="hgc-0I-7A6"/>
+                                    <outlet property="delegate" destination="zKd-qt-oE0" id="F6e-5B-i7G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JfS-uR-k9R" firstAttribute="leading" secondItem="BVW-LP-aGj" secondAttribute="leading" id="4sS-Ao-akw"/>
+                            <constraint firstAttribute="trailing" secondItem="JfS-uR-k9R" secondAttribute="trailing" id="G3g-I7-e03"/>
+                            <constraint firstItem="JfS-uR-k9R" firstAttribute="top" secondItem="sTv-ss-mQ1" secondAttribute="bottom" id="YrF-Vd-xa7"/>
+                            <constraint firstItem="Lc9-Ir-D2C" firstAttribute="top" secondItem="JfS-uR-k9R" secondAttribute="bottom" id="xDm-D1-oi7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ingredientes" id="9Jo-n3-z2P">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="j5B-JF-7tB">
+                            <connections>
+                                <segue destination="ZGn-zI-bGU" kind="show" id="CzJ-cm-omd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="next" destination="j5B-JF-7tB" id="FUn-5B-Tha"/>
+                        <outlet property="tableview" destination="JfS-uR-k9R" id="Fh0-7Y-4HD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5NB-YH-MjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3248" y="364"/>
+        </scene>
+        <!--Confirmar-->
+        <scene sceneID="QIw-qa-EoM">
+            <objects>
+                <viewController id="ZGn-zI-bGU" customClass="ConfirmarViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F1B-Lr-p7h"/>
+                        <viewControllerLayoutGuide type="bottom" id="cgx-YZ-kQu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tfe-0G-xzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwy-8h-fUd">
+                                <rect key="frame" x="10" y="114" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBV-w3-xFi">
+                                <rect key="frame" x="10" y="155" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFL-Nk-ZIx">
+                                <rect key="frame" x="10" y="186" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9en-vz-JcW">
+                                <rect key="frame" x="10" y="217" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEo-M7-r1z">
+                                <rect key="frame" x="10" y="248" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32X-R4-zm2">
+                                <rect key="frame" x="244" y="506" width="113" height="30"/>
+                                <state key="normal" title="Mandar a cocina"/>
+                                <connections>
+                                    <action selector="onSendTouch:" destination="ZGn-zI-bGU" eventType="touchUpInside" id="1xG-l0-x35"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WFL-Nk-ZIx" secondAttribute="trailing" constant="10" id="4W3-Dt-WNo"/>
+                            <constraint firstAttribute="trailing" secondItem="WBV-w3-xFi" secondAttribute="trailing" constant="10" id="9TM-gf-wPA"/>
+                            <constraint firstItem="cgx-YZ-kQu" firstAttribute="top" secondItem="32X-R4-zm2" secondAttribute="bottom" constant="20" id="Bv8-8F-VjW"/>
+                            <constraint firstItem="WFL-Nk-ZIx" firstAttribute="top" secondItem="WBV-w3-xFi" secondAttribute="bottom" constant="10" id="C2Z-Mk-qhp"/>
+                            <constraint firstItem="jEo-M7-r1z" firstAttribute="top" secondItem="9en-vz-JcW" secondAttribute="bottom" constant="10" id="DAA-dZ-PfY"/>
+                            <constraint firstItem="9en-vz-JcW" firstAttribute="leading" secondItem="tfe-0G-xzJ" secondAttribute="leading" constant="10" id="IVw-2v-niY"/>
+                            <constraint firstItem="9en-vz-JcW" firstAttribute="top" secondItem="WFL-Nk-ZIx" secondAttribute="bottom" constant="10" id="JFW-yi-wXe"/>
+                            <constraint firstItem="WBV-w3-xFi" firstAttribute="top" secondItem="Zwy-8h-fUd" secondAttribute="bottom" constant="20" id="SU5-Gz-AbR"/>
+                            <constraint firstItem="Zwy-8h-fUd" firstAttribute="leading" secondItem="tfe-0G-xzJ" secondAttribute="leading" constant="10" id="TpV-uY-eGG"/>
+                            <constraint firstItem="jEo-M7-r1z" firstAttribute="leading" secondItem="tfe-0G-xzJ" secondAttribute="leading" constant="10" id="Z5g-ep-dAQ"/>
+                            <constraint firstItem="Zwy-8h-fUd" firstAttribute="top" secondItem="F1B-Lr-p7h" secondAttribute="bottom" constant="50" id="aXT-MD-5na"/>
+                            <constraint firstItem="WFL-Nk-ZIx" firstAttribute="leading" secondItem="tfe-0G-xzJ" secondAttribute="leading" constant="10" id="bdI-cb-9UJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jEo-M7-r1z" secondAttribute="trailing" constant="10" id="haa-vD-WS2"/>
+                            <constraint firstAttribute="trailing" secondItem="9en-vz-JcW" secondAttribute="trailing" constant="10" id="o3q-xY-Dd8"/>
+                            <constraint firstAttribute="trailing" secondItem="Zwy-8h-fUd" secondAttribute="trailing" constant="10" id="rmN-ZA-uQI"/>
+                            <constraint firstItem="WBV-w3-xFi" firstAttribute="leading" secondItem="tfe-0G-xzJ" secondAttribute="leading" constant="10" id="t7e-rw-p5y"/>
+                            <constraint firstItem="32X-R4-zm2" firstAttribute="centerX" secondItem="tfe-0G-xzJ" secondAttribute="centerX" id="wE6-Rc-nEN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Confirmar" id="Ots-in-uYF"/>
+                    <connections>
+                        <outlet property="ingredientes" destination="jEo-M7-r1z" id="5oD-AW-HMJ"/>
+                        <outlet property="masa" destination="WFL-Nk-ZIx" id="qZR-dY-NgE"/>
+                        <outlet property="queso" destination="9en-vz-JcW" id="5rL-vi-lSN"/>
+                        <outlet property="tamanio" destination="WBV-w3-xFi" id="XXE-Ti-KO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctx-gJ-1wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3946" y="452"/>
+        </scene>
+        <!--Cooking View Controller-->
+        <scene sceneID="ojA-B8-b4R">
+            <objects>
+                <viewController storyboardIdentifier="CookingViewController" id="1N5-Xf-UBw" customClass="CookingViewController" customModule="PizzaCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WDa-BA-4Gt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nvy-kT-5ge"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gE1-yE-Ejb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡¡¡Tu pizza está en el horno!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T3-0G-QMD">
+                                <rect key="frame" x="10" y="70" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heW-Yg-9eP">
+                                <rect key="frame" x="241" y="191" width="119" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N42-0j-C8y"/>
+                                    <constraint firstAttribute="width" constant="119" id="ODG-xf-TKf"/>
+                                </constraints>
+                                <state key="normal" title="Volver a empezar"/>
+                                <connections>
+                                    <action selector="onRestartTouch:" destination="1N5-Xf-UBw" eventType="touchUpInside" id="F4g-yc-DEl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9T3-0G-QMD" firstAttribute="top" secondItem="WDa-BA-4Gt" secondAttribute="bottom" constant="50" id="7Ff-3m-cil"/>
+                            <constraint firstItem="9T3-0G-QMD" firstAttribute="leading" secondItem="gE1-yE-Ejb" secondAttribute="leading" constant="10" id="ACK-sK-ci0"/>
+                            <constraint firstAttribute="trailing" secondItem="9T3-0G-QMD" secondAttribute="trailing" constant="10" id="aTi-nt-xzC"/>
+                            <constraint firstItem="heW-Yg-9eP" firstAttribute="centerX" secondItem="gE1-yE-Ejb" secondAttribute="centerX" id="j0R-tO-jUO"/>
+                            <constraint firstItem="heW-Yg-9eP" firstAttribute="top" secondItem="9T3-0G-QMD" secondAttribute="bottom" constant="100" id="wX5-qW-Gxo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymj-Mk-pyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4631" y="452"/>
+        </scene>
+    </scenes>
+</document>
