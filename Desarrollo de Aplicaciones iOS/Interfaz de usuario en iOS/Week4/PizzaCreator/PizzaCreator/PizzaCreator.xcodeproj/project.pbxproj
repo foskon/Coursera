@@ -21,8 +21,6 @@
 		736A4D6A1DA011E900B84C23 /* PizzaDought.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460605F210A109F91729394 /* PizzaDought.swift */; };
 		736A4D6B1DA011E900B84C23 /* PizzaIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606EBBEAD0D49A960200A1 /* PizzaIngredient.swift */; };
 		736A4D6C1DA011E900B84C23 /* PizzaSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606E082883DCE9F028FCA3 /* PizzaSize.swift */; };
-		736A4D6E1DA013A300B84C23 /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A4D6D1DA013A300B84C23 /* LabelRow.swift */; };
-		736A4D701DA019D000B84C23 /* MasaWKInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A4D6F1DA019D000B84C23 /* MasaWKInterfaceController.swift */; };
 		736A4D721DA05EBF00B84C23 /* CheeseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A4D711DA05EBF00B84C23 /* CheeseInterfaceController.swift */; };
 		736A4D741DA0610500B84C23 /* IngredientsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A4D731DA0610500B84C23 /* IngredientsInterfaceController.swift */; };
 		736A4D761DA0617E00B84C23 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A4D751DA0617E00B84C23 /* SliderRow.swift */; };
@@ -37,8 +35,10 @@
 		B4606391C993F44EBE597779 /* IngredientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606F01136952FEBC4A96E9 /* IngredientesViewController.swift */; };
 		B46063B971E67B0BA400ABE5 /* TamanioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606BAD0ABA522D5E7F5748 /* TamanioViewController.swift */; };
 		B46063FF4BF952261F8F8648 /* PizzaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460693510802B5A7E9BD87D /* PizzaManager.swift */; };
+		B4606497852577507311BBF0 /* MasaWKInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46063E11A862D82F1349A49 /* MasaWKInterfaceController.swift */; };
 		B46064F5FBAF9C4ACD131B2D /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606ED1CE098BCB5FE441F3 /* K.swift */; };
 		B46064FC2318EE77BD1E3C20 /* ConfirmarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606A70944A69DD0A1E9238 /* ConfirmarViewController.swift */; };
+		B4606561DAF9C9F158C8C631 /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46065E22D956C3C0074AC73 /* LabelRow.swift */; };
 		B4606874A38EECE6C500E4FF /* CheeseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46061F82A4C0903E259AAB1 /* CheeseViewController.swift */; };
 		B4606982BE5E573CD51C1980 /* BasePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460653A2E9E8C2287CD5F9D /* BasePickerViewController.swift */; };
 		B46069D50A943C26EAB71FA4 /* PizzaChesse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606136C083898C267AE62A /* PizzaChesse.swift */; };
@@ -99,8 +99,6 @@
 		736A4D561DA0107600B84C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736A4D581DA0107600B84C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736A4D641DA0111600B84C23 /* PizzaSizeWKInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaSizeWKInterfaceController.swift; sourceTree = "<group>"; };
-		736A4D6D1DA013A300B84C23 /* LabelRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRow.swift; sourceTree = "<group>"; };
-		736A4D6F1DA019D000B84C23 /* MasaWKInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaWKInterfaceController.swift; sourceTree = "<group>"; };
 		736A4D711DA05EBF00B84C23 /* CheeseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseInterfaceController.swift; sourceTree = "<group>"; };
 		736A4D731DA0610500B84C23 /* IngredientsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsInterfaceController.swift; sourceTree = "<group>"; };
 		736A4D751DA0617E00B84C23 /* SliderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderRow.swift; sourceTree = "<group>"; };
@@ -116,7 +114,9 @@
 		B46061F82A4C0903E259AAB1 /* CheeseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseViewController.swift; sourceTree = "<group>"; };
 		B46063303E445CAFCD11C259 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		B460637E49C69B513E2E1FA9 /* CookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookingViewController.swift; sourceTree = "<group>"; };
+		B46063E11A862D82F1349A49 /* MasaWKInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaWKInterfaceController.swift; sourceTree = "<group>"; };
 		B460653A2E9E8C2287CD5F9D /* BasePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePickerViewController.swift; sourceTree = "<group>"; };
+		B46065E22D956C3C0074AC73 /* LabelRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRow.swift; sourceTree = "<group>"; };
 		B46068F9D5AA7BD7FFAB069A /* MasaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaViewController.swift; sourceTree = "<group>"; };
 		B460693510802B5A7E9BD87D /* PizzaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaManager.swift; sourceTree = "<group>"; };
 		B4606A70944A69DD0A1E9238 /* ConfirmarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmarViewController.swift; sourceTree = "<group>"; };
@@ -151,8 +151,6 @@
 				736A4D431DA0107600B84C23 /* Interface.storyboard */,
 				736A4D461DA0107600B84C23 /* Assets.xcassets */,
 				736A4D481DA0107600B84C23 /* Info.plist */,
-				736A4D6D1DA013A300B84C23 /* LabelRow.swift */,
-				736A4D6F1DA019D000B84C23 /* MasaWKInterfaceController.swift */,
 			);
 			path = PizzaWatch;
 			sourceTree = "<group>";
@@ -168,6 +166,8 @@
 				736A4D731DA0610500B84C23 /* IngredientsInterfaceController.swift */,
 				736A4D751DA0617E00B84C23 /* SliderRow.swift */,
 				736A4D771DA06B6900B84C23 /* FinishInterfaceController.swift */,
+				B46063E11A862D82F1349A49 /* MasaWKInterfaceController.swift */,
+				B46065E22D956C3C0074AC73 /* LabelRow.swift */,
 			);
 			path = "PizzaWatch Extension";
 			sourceTree = "<group>";
@@ -393,13 +393,13 @@
 				736A4D781DA06B6900B84C23 /* FinishInterfaceController.swift in Sources */,
 				736A4D661DA011DA00B84C23 /* PizzaManager.swift in Sources */,
 				736A4D6A1DA011E900B84C23 /* PizzaDought.swift in Sources */,
-				736A4D6E1DA013A300B84C23 /* LabelRow.swift in Sources */,
-				736A4D701DA019D000B84C23 /* MasaWKInterfaceController.swift in Sources */,
 				736A4D761DA0617E00B84C23 /* SliderRow.swift in Sources */,
 				736A4D681DA011E500B84C23 /* Pizza.swift in Sources */,
 				736A4D651DA0111600B84C23 /* PizzaSizeWKInterfaceController.swift in Sources */,
 				736A4D691DA011E900B84C23 /* PizzaChesse.swift in Sources */,
 				736A4D6B1DA011E900B84C23 /* PizzaIngredient.swift in Sources */,
+				B4606497852577507311BBF0 /* MasaWKInterfaceController.swift in Sources */,
+				B4606561DAF9C9F158C8C631 /* LabelRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
