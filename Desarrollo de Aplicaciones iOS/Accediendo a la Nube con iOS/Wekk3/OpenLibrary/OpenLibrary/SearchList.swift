@@ -1,0 +1,36 @@
+//
+//  SearchList.swift
+//  OpenLibrary
+//
+//  Created by Carlos Manzanas on 09/10/16.
+//  Copyright © 2016 foskon. All rights reserved.
+//
+
+import UIKit
+
+class SearchList: UITableViewController {
+    
+    let library = Library.sharedInstance
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let rows = self.library.getSearches().count
+        return rows
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
+        let book = self.library.getSearches()[indexPath.row]
+        cell?.textLabel?.text = book.title
+        
+        return cell
+    }
+}
