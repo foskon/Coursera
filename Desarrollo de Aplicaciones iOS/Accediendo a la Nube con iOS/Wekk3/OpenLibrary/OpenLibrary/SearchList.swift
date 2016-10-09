@@ -33,4 +33,13 @@ class SearchList: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let book = self.library.getSearches()[indexPath.row]
+        if let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController? {
+            vc.setBook(book)
+            self.navigationController?.showViewController(vc, sender: nil)
+        }
+        
+    }
 }
