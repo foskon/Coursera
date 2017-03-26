@@ -21,5 +21,11 @@ class SongPlayingVC: UIViewController {
     
     func setSong(song: Song) {
         self.label.text = song.getTitle()
+        do {
+            let data = try Data(contentsOf: song.getThumbUrl())
+            image.image = UIImage(data: data)
+        } catch {
+            
+        }
     }
 }
