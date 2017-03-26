@@ -12,7 +12,7 @@ class PlayerClient {
     
     let songs: [Song]
     let player: PlayerAVFoundation
-    var currentIndex = 0
+    var currentIndex = -1
     
     init(songs: [Song]) {
         self.songs = songs
@@ -23,6 +23,12 @@ class PlayerClient {
         if let songIndex = getSongIndex(songId: songId) {
             currentIndex = songIndex
             player.play(song: songs[currentIndex])
+        }
+    }
+    
+    func play() {
+        if (currentIndex != -1) {
+            player.play()   
         }
     }
     

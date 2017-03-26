@@ -27,12 +27,6 @@
                                     <segue destination="ltB-kj-hyp" kind="embed" identifier="SongsTable" id="AXG-9G-7aO"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjN-EY-nE8">
-                                <state key="normal" title="Shuffle"/>
-                                <connections>
-                                    <action selector="didTouchShuffle" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sV-7L-XFs"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-jF-UFD">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="bSj-C0-xtb"/>
@@ -41,17 +35,47 @@
                                     <segue destination="sXd-Bc-N6h" kind="embed" identifier="SongPlayingVC" id="D7g-Tb-Il5"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D41-rM-ILI">
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="didTouchPause" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUz-fc-d6C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-JA-yZS">
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="didTouchPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7a-kq-Fsk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X34-3b-aE8">
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="didTouchStop" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzv-ID-czH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjN-EY-nE8">
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="didTouchShuffle" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sV-7L-XFs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5f0-jF-UFD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Ca-e2-WQU"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="top" secondItem="NjN-EY-nE8" secondAttribute="bottom" constant="20" id="7MB-QM-rZA"/>
                             <constraint firstAttribute="trailing" secondItem="ki9-wq-fUD" secondAttribute="trailing" id="8BK-Jg-1PA"/>
+                            <constraint firstItem="X34-3b-aE8" firstAttribute="baseline" secondItem="ncc-JA-yZS" secondAttribute="baseline" id="DVl-Yb-Qw6"/>
+                            <constraint firstItem="NjN-EY-nE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="HVI-67-FBp"/>
                             <constraint firstAttribute="trailing" secondItem="5f0-jF-UFD" secondAttribute="trailing" id="HYC-MV-LxI"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tzf-tX-CnY"/>
+                            <constraint firstItem="NjN-EY-nE8" firstAttribute="baseline" secondItem="ncc-JA-yZS" secondAttribute="baseline" id="Y24-JN-aVV"/>
+                            <constraint firstItem="X34-3b-aE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="Y8I-Sf-hEU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ki9-wq-fUD" secondAttribute="bottom" id="cys-qc-epc"/>
                             <constraint firstItem="5f0-jF-UFD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dNv-7s-jtX"/>
-                            <constraint firstItem="NjN-EY-nE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEy-NF-KPt"/>
+                            <constraint firstItem="ncc-JA-yZS" firstAttribute="baseline" secondItem="D41-rM-ILI" secondAttribute="baseline" id="iGa-o1-IbN"/>
+                            <constraint firstItem="ncc-JA-yZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="pco-9w-MKg"/>
+                            <constraint firstItem="D41-rM-ILI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="qgT-ws-Lds"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -100,6 +124,10 @@
         <scene sceneID="UHt-Yy-ojs">
             <objects>
                 <viewController id="sXd-Bc-N6h" customClass="SongPlayingVC" customModule="reproductor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="snH-4b-eri"/>
+                        <viewControllerLayoutGuide type="bottom" id="B56-Gn-OW7"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WfX-3x-29h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

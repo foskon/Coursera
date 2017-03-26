@@ -35,4 +35,8 @@ class PlayerAVFoundation: Player {
             print("ERROR Playing")
         }
     }
+    
+    func play() {
+        player.play()
+    }
 }
