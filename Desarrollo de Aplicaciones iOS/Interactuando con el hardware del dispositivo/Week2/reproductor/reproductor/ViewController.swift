@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     let player = PlayerAVFoundation()
+    let songsProvider = SongsProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let songs = SongsProvider().getSongs()
-        player.play(song: songs[0])
+        player.play(song: songsProvider.getSongs()[0])
     }
 
     override func didReceiveMemoryWarning() {

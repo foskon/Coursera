@@ -24,6 +24,9 @@
 		737CC4FF1E87C95000C82094 /* song3_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4FB1E87C95000C82094 /* song3_img.jpeg */; };
 		737CC5001E87C95000C82094 /* song4_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4FC1E87C95000C82094 /* song4_img.jpeg */; };
 		737CC5021E87CC8700C82094 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC5011E87CC8700C82094 /* Player.swift */; };
+		737CC5041E87DD9600C82094 /* SongsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC5031E87DD9600C82094 /* SongsTableVC.swift */; };
+		737CC5061E87E01B00C82094 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737CC5051E87E01B00C82094 /* SongCell.xib */; };
+		737CC5081E87E03800C82094 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC5071E87E03800C82094 /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		737CC4FB1E87C95000C82094 /* song3_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song3_img.jpeg; sourceTree = "<group>"; };
 		737CC4FC1E87C95000C82094 /* song4_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song4_img.jpeg; sourceTree = "<group>"; };
 		737CC5011E87CC8700C82094 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		737CC5031E87DD9600C82094 /* SongsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableVC.swift; sourceTree = "<group>"; };
+		737CC5051E87E01B00C82094 /* SongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
+		737CC5071E87E03800C82094 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				737CC4ED1E87C72300C82094 /* song4.mp3 */,
+				737CC5031E87DD9600C82094 /* SongsTableVC.swift */,
 				737CC5011E87CC8700C82094 /* Player.swift */,
 				737CC4F51E87C7BA00C82094 /* Song.swift */,
 				737CC4EE1E87C72300C82094 /* song3.mp3 */,
@@ -116,6 +123,8 @@
 				737CC4D61E87BE2E00C82094 /* LaunchScreen.storyboard */,
 				737CC4D91E87BE2E00C82094 /* Info.plist */,
 				737CC4F71E87C85300C82094 /* SongsProvider.swift */,
+				737CC5051E87E01B00C82094 /* SongCell.xib */,
+				737CC5071E87E03800C82094 /* SongCell.swift */,
 			);
 			path = reproductor;
 			sourceTree = "<group>";
@@ -222,6 +231,7 @@
 				737CC4F21E87C72300C82094 /* song3.mp3 in Resources */,
 				737CC4F11E87C72300C82094 /* song4.mp3 in Resources */,
 				737CC4F31E87C72300C82094 /* song2.mp3 in Resources */,
+				737CC5061E87E01B00C82094 /* SongCell.xib in Resources */,
 				737CC4FD1E87C95000C82094 /* song1_img.jpeg in Resources */,
 				737CC5001E87C95000C82094 /* song4_img.jpeg in Resources */,
 				737CC4D31E87BE2E00C82094 /* Main.storyboard in Resources */,
@@ -245,7 +255,9 @@
 				737CC4F61E87C7BA00C82094 /* Song.swift in Sources */,
 				737CC4D01E87BE2E00C82094 /* ViewController.swift in Sources */,
 				737CC4CE1E87BE2E00C82094 /* AppDelegate.swift in Sources */,
+				737CC5081E87E03800C82094 /* SongCell.swift in Sources */,
 				737CC5021E87CC8700C82094 /* Player.swift in Sources */,
+				737CC5041E87DD9600C82094 /* SongsTableVC.swift in Sources */,
 				737CC4F81E87C85300C82094 /* SongsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

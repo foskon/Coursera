@@ -10,15 +10,19 @@ import Foundation
 
 class Song {
     
-    private let name: String
+    private let title: String
     private let path: URL
     
-    init(name: String, path: URL) {
-        self.name = name
+    init(title: String, path: URL) {
+        self.title = title
         self.path = path
     }
     
     func getUrl() -> URL {
         return path
+    }
+    
+    func getTitle() -> String {
+        return title
     }
 }

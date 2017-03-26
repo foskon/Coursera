@@ -23,10 +23,10 @@ class SongsProvider {
                 fatalError()
         }
             
-        let song1 = Song(name: "Super String Theory (ID 474)", path: song1Data)
-        let song2 = Song(name: "Doctor's In", path: song2Data)
-        let song3 = Song(name: "Lay Down", path: song3Data)
-        let song4 = Song(name: "Alice", path: song4Data)
+        let song1 = Song(title: "Super String Theory (ID 474)", path: song1Data)
+        let song2 = Song(title: "Doctor's In", path: song2Data)
+        let song3 = Song(title: "Lay Down", path: song3Data)
+        let song4 = Song(title: "Alice", path: song4Data)
         
         self.songs = [song1, song2, song3, song4]
     }
