@@ -34,11 +34,11 @@ class ViewController: UIViewController, SongsTableDelegate {
     }
     
     @IBAction func didTouchStop() {
-        
+        player.stop()
     }
     
     @IBAction func didTouchPause() {
-        
+        player.pause()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

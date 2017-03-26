@@ -13,6 +13,7 @@ class PlayerClient {
     let songs: [Song]
     let player: PlayerAVFoundation
     var currentIndex = -1
+    var isStopped = true
     
     init(songs: [Song]) {
         self.songs = songs
@@ -23,13 +24,28 @@ class PlayerClient {
         if let songIndex = getSongIndex(songId: songId) {
             currentIndex = songIndex
             player.play(song: songs[currentIndex])
+            isStopped = false
         }
     }
     
     func play() {
         if (currentIndex != -1) {
-            player.play()   
+            if (isStopped) {
+                player.play(song: songs[currentIndex])
+            } else {
+                player.play()
+            }
+            isStopped = false
         }
+    }
+    
+    func stop() {
+        player.stop()
+        isStopped = true
+    }
+    
+    func pause() {
+        player.stop()
     }
     
     func shuffle() {

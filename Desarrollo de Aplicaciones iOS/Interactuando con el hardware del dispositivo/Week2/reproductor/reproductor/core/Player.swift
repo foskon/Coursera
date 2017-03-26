@@ -25,7 +25,9 @@ class PlayerAVFoundation: Player {
     }
     
     // Player
-    internal func stop() {}
+    internal func stop() {
+        player.stop()
+    }
     
     internal func play(song: Song) {
         do {
