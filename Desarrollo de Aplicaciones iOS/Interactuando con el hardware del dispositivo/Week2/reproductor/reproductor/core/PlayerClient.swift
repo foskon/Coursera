@@ -12,6 +12,7 @@ class PlayerClient {
     
     let songs: [Song]
     let player: PlayerAVFoundation
+    var currentIndex = 0
     
     init(songs: [Song]) {
         self.songs = songs
@@ -19,16 +20,26 @@ class PlayerClient {
     }
     
     func play(songId: String) {
-        if let song = getSong(songId: songId) {
-            player.play(song: song)
+        if let songIndex = getSongIndex(songId: songId) {
+            currentIndex = songIndex
+            player.play(song: songs[currentIndex])
         }
     }
     
-    private func getSong(songId: String) -> Song? {
+    func shuffle() {
+        var randomIndex = Int(arc4random_uniform(UInt32(songs.count)))
+        if randomIndex == currentIndex {
+            randomIndex = (randomIndex + 1) % songs.count
+        }
+        currentIndex = randomIndex
+        play(songId: songs[currentIndex].getId())
+    }
+    
+    private func getSongIndex(songId: String) -> Int? {
         let index = songs.index { (song) -> Bool in
             return song.getId() == songId
         }
         
-        return index != nil ? songs[index!] : nil
+        return index
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, SongsTableDelegate {
     
     var player: PlayerClient!
+    var songsTable: SongsTableVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +19,17 @@ class ViewController: UIViewController, SongsTableDelegate {
         player = PlayerClient(songs: getSongs())
     }
     
+    @IBAction func didTouchShuffle() {
+        player.shuffle()
+        songsTable.selectIndex(index: player.currentIndex)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == "SongsTable") {
             let view = segue.destination as! SongsTableVC
-            view.delegate = self
+            songsTable = view
+            songsTable.delegate = self
         }
     }
     

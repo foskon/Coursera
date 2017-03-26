@@ -28,6 +28,11 @@ class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         table.register(SongCell.self, forCellReuseIdentifier: SongCell.identifier)
     }
     
+    func selectIndex(index: Int) {
+        let indexPath = IndexPath(row: index, section: 0)
+        table.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+    }
+    
     //
     // UITableView DataSource
     //
