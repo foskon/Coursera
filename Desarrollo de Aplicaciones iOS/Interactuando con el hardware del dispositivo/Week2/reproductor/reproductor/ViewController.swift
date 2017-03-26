@@ -12,6 +12,7 @@ class ViewController: UIViewController, SongsTableDelegate {
     
     var player: PlayerClient!
     var songsTable: SongsTableVC!
+    var songPlaying: SongPlayingVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,11 @@ class ViewController: UIViewController, SongsTableDelegate {
     
     @IBAction func didTouchShuffle() {
         player.shuffle()
-        songsTable.selectIndex(index: player.currentIndex)
+        
+        let index = player.currentIndex
+        songsTable.selectIndex(index: index)
+        let song = player.songs[index]
+        songPlaying.setSong(song: song)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,6 +35,10 @@ class ViewController: UIViewController, SongsTableDelegate {
             let view = segue.destination as! SongsTableVC
             songsTable = view
             songsTable.delegate = self
+        }
+        if (segue.identifier == "SongPlayingVC") {
+            let view = segue.destination as! SongPlayingVC
+            songPlaying = view
         }
     }
     
@@ -44,6 +53,8 @@ class ViewController: UIViewController, SongsTableDelegate {
     
     func didSelect(songId: String) {
         player.play(songId: songId)
+        let song = player.songs[player.currentIndex]
+        songPlaying.setSong(song: song)
     }
     
     func numberOfSongs() -> Int {

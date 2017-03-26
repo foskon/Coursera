@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,14 +33,25 @@
                                     <action selector="didTouchShuffle" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sV-7L-XFs"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-jF-UFD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bSj-C0-xtb"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="sXd-Bc-N6h" kind="embed" identifier="SongPlayingVC" id="D7g-Tb-Il5"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5f0-jF-UFD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Ca-e2-WQU"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="top" secondItem="NjN-EY-nE8" secondAttribute="bottom" constant="20" id="7MB-QM-rZA"/>
                             <constraint firstAttribute="trailing" secondItem="ki9-wq-fUD" secondAttribute="trailing" id="8BK-Jg-1PA"/>
+                            <constraint firstAttribute="trailing" secondItem="5f0-jF-UFD" secondAttribute="trailing" id="HYC-MV-LxI"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tzf-tX-CnY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ki9-wq-fUD" secondAttribute="bottom" id="cys-qc-epc"/>
-                            <constraint firstItem="NjN-EY-nE8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sxQ-d3-qxz"/>
+                            <constraint firstItem="5f0-jF-UFD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dNv-7s-jtX"/>
+                            <constraint firstItem="NjN-EY-nE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEy-NF-KPt"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -83,6 +95,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGJ-Fg-inF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1104.8" y="27.886056971514247"/>
+        </scene>
+        <!--Song PlayingVC-->
+        <scene sceneID="UHt-Yy-ojs">
+            <objects>
+                <viewController id="sXd-Bc-N6h" customClass="SongPlayingVC" customModule="reproductor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WfX-3x-29h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZx-94-3yX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="CkK-W6-3Ot"/>
+                                    <constraint firstAttribute="width" constant="150" id="tRB-Bc-qo6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99t-wN-LgI">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XZx-94-3yX" firstAttribute="centerX" secondItem="WfX-3x-29h" secondAttribute="centerX" id="4dY-Oh-YOd"/>
+                            <constraint firstItem="99t-wN-LgI" firstAttribute="leading" secondItem="WfX-3x-29h" secondAttribute="leadingMargin" id="9ZI-0U-XPe"/>
+                            <constraint firstItem="99t-wN-LgI" firstAttribute="top" secondItem="XZx-94-3yX" secondAttribute="bottom" constant="20" id="INJ-N6-Ntx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="99t-wN-LgI" secondAttribute="trailing" id="PfR-jo-oBP"/>
+                            <constraint firstItem="XZx-94-3yX" firstAttribute="top" secondItem="WfX-3x-29h" secondAttribute="topMargin" constant="20" id="ai8-ir-BCf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="XZx-94-3yX" id="PZh-fF-Muf"/>
+                        <outlet property="label" destination="99t-wN-LgI" id="pD8-up-1Jy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dYI-Zm-wx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-339"/>
         </scene>
     </scenes>
 </document>
