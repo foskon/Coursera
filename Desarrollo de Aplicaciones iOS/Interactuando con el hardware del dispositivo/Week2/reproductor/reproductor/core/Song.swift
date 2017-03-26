@@ -13,11 +13,13 @@ class Song: CustomStringConvertible {
     private let id: String
     private let title: String
     private let path: URL
+    private let thumb: URL
     
-    init(title: String, path: URL) {
+    init(title: String, path: URL, thumb: URL) {
         self.id = path.absoluteString
         self.title = title
         self.path = path
+        self.thumb = thumb
     }
     
     func getId() -> String {
@@ -30,6 +32,10 @@ class Song: CustomStringConvertible {
     
     func getTitle() -> String {
         return title
+    }
+    
+    func getThumbUrl() -> URL {
+        return thumb
     }
     
     var description: String {

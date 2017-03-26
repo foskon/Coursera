@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7334E9141E884A5F00FF2995 /* SongPlayingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334E9131E884A5F00FF2995 /* SongPlayingVC.swift */; };
 		737CC4CE1E87BE2E00C82094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC4CD1E87BE2E00C82094 /* AppDelegate.swift */; };
 		737CC4D01E87BE2E00C82094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC4CF1E87BE2E00C82094 /* ViewController.swift */; };
 		737CC4D31E87BE2E00C82094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4D11E87BE2E00C82094 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7334E9131E884A5F00FF2995 /* SongPlayingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPlayingVC.swift; sourceTree = "<group>"; };
 		737CC4CA1E87BE2E00C82094 /* reproductor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reproductor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		737CC4CD1E87BE2E00C82094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		737CC4CF1E87BE2E00C82094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				737CC5031E87DD9600C82094 /* SongsTableVC.swift */,
 				737CC4CD1E87BE2E00C82094 /* AppDelegate.swift */,
 				737CC4CF1E87BE2E00C82094 /* ViewController.swift */,
+				7334E9131E884A5F00FF2995 /* SongPlayingVC.swift */,
 				737CC4D11E87BE2E00C82094 /* Main.storyboard */,
 				737CC4D41E87BE2E00C82094 /* Assets.xcassets */,
 				737CC4D61E87BE2E00C82094 /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				737CC4CE1E87BE2E00C82094 /* AppDelegate.swift in Sources */,
 				737CC5081E87E03800C82094 /* SongCell.swift in Sources */,
 				737CC5041E87DD9600C82094 /* SongsTableVC.swift in Sources */,
+				7334E9141E884A5F00FF2995 /* SongPlayingVC.swift in Sources */,
 				B46067398B224E927AB30958 /* SongsProvider.swift in Sources */,
 				B460653FD04496AF81C6BBA5 /* Song.swift in Sources */,
 				B4606807DBF2F5D3D54D2A41 /* Player.swift in Sources */,
@@ -488,6 +492,7 @@
 				737CC4E91E87BE2E00C82094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		737CC4EA1E87BE2E00C82094 /* Build configuration list for PBXNativeTarget "reproductorTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				737CC4EC1E87BE2E00C82094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
