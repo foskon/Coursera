@@ -26,12 +26,20 @@
                                     <segue destination="ltB-kj-hyp" kind="embed" identifier="SongsTable" id="AXG-9G-7aO"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjN-EY-nE8">
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="didTouchShuffle" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sV-7L-XFs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ki9-wq-fUD" firstAttribute="top" secondItem="NjN-EY-nE8" secondAttribute="bottom" constant="20" id="7MB-QM-rZA"/>
                             <constraint firstAttribute="trailing" secondItem="ki9-wq-fUD" secondAttribute="trailing" id="8BK-Jg-1PA"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tzf-tX-CnY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ki9-wq-fUD" secondAttribute="bottom" id="cys-qc-epc"/>
+                            <constraint firstItem="NjN-EY-nE8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sxQ-d3-qxz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,6 +51,10 @@
         <scene sceneID="zfi-JV-xpo">
             <objects>
                 <viewController id="ltB-kj-hyp" customClass="SongsTableVC" customModule="reproductor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isO-cX-tIR"/>
+                        <viewControllerLayoutGuide type="bottom" id="jW9-QU-kZq"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KKP-oa-Hk1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

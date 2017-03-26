@@ -10,23 +10,47 @@ import UIKit
 
 class ViewController: UIViewController, SongsTableDelegate {
     
-    let player = PlayerAVFoundation()
-    let songsProvider = SongsProvider()
+    var player: PlayerClient!
+    var songsTable: SongsTableVC!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        player = PlayerClient(songs: getSongs())
+    }
+    
+    @IBAction func didTouchShuffle() {
+        player.shuffle()
+        songsTable.selectIndex(index: player.currentIndex)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == "SongsTable") {
             let view = segue.destination as! SongsTableVC
-            view.songs = songsProvider.getSongs()
-            view.delegate = self
+            songsTable = view
+            songsTable.delegate = self
         }
+    }
+    
+    fileprivate func getSongs() -> [Song] {
+        let provider = SongsProvider()
+        return provider.getSongs()
     }
     
     //
     // SongsTable Delegate
     //
     
-    func didSelectSong(song: Song) {
-        player.play(song: song)
+    func didSelect(songId: String) {
+        player.play(songId: songId)
+    }
+    
+    func numberOfSongs() -> Int {
+        return player.songs.count
+    }
+    
+    func songForRow(row: Int) -> Song {
+        return player.songs[row]
     }
 }
