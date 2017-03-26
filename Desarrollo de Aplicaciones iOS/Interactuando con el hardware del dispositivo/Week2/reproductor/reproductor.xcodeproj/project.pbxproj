@@ -16,6 +16,7 @@
 		737CC5041E87DD9600C82094 /* SongsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC5031E87DD9600C82094 /* SongsTableVC.swift */; };
 		737CC5061E87E01B00C82094 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737CC5051E87E01B00C82094 /* SongCell.xib */; };
 		737CC5081E87E03800C82094 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC5071E87E03800C82094 /* SongCell.swift */; };
+		73C3A7991E882C930043F214 /* PlayerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3A7981E882C930043F214 /* PlayerClient.swift */; };
 		B46060A747737842FA3BE146 /* song4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B46064BD6697575735A40164 /* song4.mp3 */; };
 		B46061D47F1E8ABE8F55A851 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4606EA3A94B703EC6A27606 /* song2.mp3 */; };
 		B460653FD04496AF81C6BBA5 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4606D9F10DF4815874FA02A /* Song.swift */; };
@@ -53,6 +54,7 @@
 		737CC5031E87DD9600C82094 /* SongsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsTableVC.swift; sourceTree = "<group>"; };
 		737CC5051E87E01B00C82094 /* SongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 		737CC5071E87E03800C82094 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		73C3A7981E882C930043F214 /* PlayerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerClient.swift; sourceTree = "<group>"; };
 		B460626420063EF93769374E /* SongsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsProvider.swift; sourceTree = "<group>"; };
 		B460638887C6613034CC4780 /* song2_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song2_img.jpeg; sourceTree = "<group>"; };
 		B46064BD6697575735A40164 /* song4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song4.mp3; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				B460626420063EF93769374E /* SongsProvider.swift */,
 				B4606D9F10DF4815874FA02A /* Song.swift */,
 				B4606D60356CDD0B9153810A /* Player.swift */,
+				73C3A7981E882C930043F214 /* PlayerClient.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				737CC4D01E87BE2E00C82094 /* ViewController.swift in Sources */,
+				73C3A7991E882C930043F214 /* PlayerClient.swift in Sources */,
 				737CC4CE1E87BE2E00C82094 /* AppDelegate.swift in Sources */,
 				737CC5081E87E03800C82094 /* SongCell.swift in Sources */,
 				737CC5041E87DD9600C82094 /* SongsTableVC.swift in Sources */,

@@ -11,4 +11,6 @@ import UIKit
 class SongCell: UITableViewCell {
     
     static let identifier = "cell"
+    
+    var songId: String!
 }

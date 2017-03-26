@@ -10,15 +10,17 @@ import UIKit
 
 protocol SongsTableDelegate {
     
-    func didSelectSong(song: Song)
+    func numberOfSongs() -> Int
+    func songForRow(row: Int) -> Song
+    func didSelect(songId: String)
 }
+
 
 class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table: UITableView!
     
     var delegate: SongsTableDelegate!
-    var songs: [Song]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +31,21 @@ class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     //
     // UITableView DataSource
     //
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return songs != nil ? 1 : 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+        return delegate.numberOfSongs()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let song = songs[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let song = delegate.songForRow(row: indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SongCell
         
         cell.textLabel?.text = song.getTitle()
+        cell.songId = song.getId()
         
         return cell
     }
@@ -51,6 +55,7 @@ class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     //
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate.didSelectSong(song: songs[indexPath.row])
+        let songCell = tableView.cellForRow(at: indexPath) as! SongCell
+        delegate.didSelect(songId: songCell.songId)
     }
 }

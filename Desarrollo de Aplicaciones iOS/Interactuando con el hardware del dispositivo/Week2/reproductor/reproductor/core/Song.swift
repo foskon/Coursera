@@ -10,12 +10,18 @@ import Foundation
 
 class Song: CustomStringConvertible {
     
+    private let id: String
     private let title: String
     private let path: URL
     
     init(title: String, path: URL) {
+        self.id = path.absoluteString
         self.title = title
         self.path = path
+    }
+    
+    func getId() -> String {
+        return id
     }
     
     func getUrl() -> URL {
