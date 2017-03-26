@@ -41,6 +41,10 @@ class ViewController: UIViewController, SongsTableDelegate {
         player.pause()
     }
     
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        player.setVolume(value: sender.value)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == "SongsTable") {

@@ -59,20 +59,28 @@
                                     <action selector="didTouchShuffle" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sV-7L-XFs"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vRh-VP-rAJ">
+                                <connections>
+                                    <action selector="sliderValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="TH1-96-9sa"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5f0-jF-UFD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Ca-e2-WQU"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="top" secondItem="NjN-EY-nE8" secondAttribute="bottom" constant="20" id="7MB-QM-rZA"/>
                             <constraint firstAttribute="trailing" secondItem="ki9-wq-fUD" secondAttribute="trailing" id="8BK-Jg-1PA"/>
+                            <constraint firstItem="vRh-VP-rAJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="9sW-vd-yxS"/>
                             <constraint firstItem="X34-3b-aE8" firstAttribute="baseline" secondItem="ncc-JA-yZS" secondAttribute="baseline" id="DVl-Yb-Qw6"/>
                             <constraint firstItem="NjN-EY-nE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="HVI-67-FBp"/>
                             <constraint firstAttribute="trailing" secondItem="5f0-jF-UFD" secondAttribute="trailing" id="HYC-MV-LxI"/>
                             <constraint firstItem="ki9-wq-fUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tzf-tX-CnY"/>
                             <constraint firstItem="NjN-EY-nE8" firstAttribute="baseline" secondItem="ncc-JA-yZS" secondAttribute="baseline" id="Y24-JN-aVV"/>
                             <constraint firstItem="X34-3b-aE8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="Y8I-Sf-hEU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vRh-VP-rAJ" secondAttribute="trailing" constant="20" id="cjg-mw-2JB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ki9-wq-fUD" secondAttribute="bottom" id="cys-qc-epc"/>
                             <constraint firstItem="5f0-jF-UFD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dNv-7s-jtX"/>
+                            <constraint firstItem="D41-rM-ILI" firstAttribute="top" secondItem="vRh-VP-rAJ" secondAttribute="bottom" constant="15" id="fXI-J5-8wQ"/>
                             <constraint firstItem="ncc-JA-yZS" firstAttribute="baseline" secondItem="D41-rM-ILI" secondAttribute="baseline" id="iGa-o1-IbN"/>
                             <constraint firstItem="ncc-JA-yZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="pco-9w-MKg"/>
                             <constraint firstItem="D41-rM-ILI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="qgT-ws-Lds"/>
