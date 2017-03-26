@@ -18,6 +18,10 @@
 		737CC4F31E87C72300C82094 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4EF1E87C72300C82094 /* song2.mp3 */; };
 		737CC4F41E87C72300C82094 /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4F01E87C72300C82094 /* song1.mp3 */; };
 		737CC4F61E87C7BA00C82094 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CC4F51E87C7BA00C82094 /* Song.swift */; };
+		737CC4FD1E87C95000C82094 /* song1_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4F91E87C95000C82094 /* song1_img.jpeg */; };
+		737CC4FE1E87C95000C82094 /* song2_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4FA1E87C95000C82094 /* song2_img.jpeg */; };
+		737CC4FF1E87C95000C82094 /* song3_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4FB1E87C95000C82094 /* song3_img.jpeg */; };
+		737CC5001E87C95000C82094 /* song4_img.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 737CC4FC1E87C95000C82094 /* song4_img.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		737CC4EF1E87C72300C82094 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 		737CC4F01E87C72300C82094 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		737CC4F51E87C7BA00C82094 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		737CC4F91E87C95000C82094 /* song1_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song1_img.jpeg; sourceTree = "<group>"; };
+		737CC4FA1E87C95000C82094 /* song2_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song2_img.jpeg; sourceTree = "<group>"; };
+		737CC4FB1E87C95000C82094 /* song3_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song3_img.jpeg; sourceTree = "<group>"; };
+		737CC4FC1E87C95000C82094 /* song4_img.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = song4_img.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,10 @@
 				737CC4EE1E87C72300C82094 /* song3.mp3 */,
 				737CC4EF1E87C72300C82094 /* song2.mp3 */,
 				737CC4F01E87C72300C82094 /* song1.mp3 */,
+				737CC4F91E87C95000C82094 /* song1_img.jpeg */,
+				737CC4FA1E87C95000C82094 /* song2_img.jpeg */,
+				737CC4FB1E87C95000C82094 /* song3_img.jpeg */,
+				737CC4FC1E87C95000C82094 /* song4_img.jpeg */,
 				737CC4CD1E87BE2E00C82094 /* AppDelegate.swift */,
 				737CC4CF1E87BE2E00C82094 /* ViewController.swift */,
 				737CC4D11E87BE2E00C82094 /* Main.storyboard */,
@@ -199,9 +211,13 @@
 				737CC4F41E87C72300C82094 /* song1.mp3 in Resources */,
 				737CC4D81E87BE2E00C82094 /* LaunchScreen.storyboard in Resources */,
 				737CC4D51E87BE2E00C82094 /* Assets.xcassets in Resources */,
+				737CC4FE1E87C95000C82094 /* song2_img.jpeg in Resources */,
+				737CC4FF1E87C95000C82094 /* song3_img.jpeg in Resources */,
 				737CC4F21E87C72300C82094 /* song3.mp3 in Resources */,
 				737CC4F11E87C72300C82094 /* song4.mp3 in Resources */,
 				737CC4F31E87C72300C82094 /* song2.mp3 in Resources */,
+				737CC4FD1E87C95000C82094 /* song1_img.jpeg in Resources */,
+				737CC5001E87C95000C82094 /* song4_img.jpeg in Resources */,
 				737CC4D31E87BE2E00C82094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
