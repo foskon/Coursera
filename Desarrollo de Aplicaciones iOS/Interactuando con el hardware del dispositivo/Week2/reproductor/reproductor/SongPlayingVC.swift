@@ -28,4 +28,9 @@ class SongPlayingVC: UIViewController {
             
         }
     }
+    
+    func clear() {
+        self.label.text = ""
+        self.image.image = nil
+    }
 }

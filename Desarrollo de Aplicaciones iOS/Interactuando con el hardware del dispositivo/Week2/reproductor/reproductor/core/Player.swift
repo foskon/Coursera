@@ -25,7 +25,9 @@ class PlayerAVFoundation: Player {
     }
     
     // Player
-    internal func stop() {}
+    internal func stop() {
+        player.stop()
+    }
     
     internal func play(song: Song) {
         do {
@@ -34,5 +36,9 @@ class PlayerAVFoundation: Player {
         } catch {
             print("ERROR Playing")
         }
+    }
+    
+    func play() {
+        player.play()
     }
 }

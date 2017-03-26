@@ -33,6 +33,12 @@ class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         table.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
     }
     
+    func deselect() {
+        if let index = table.indexPathForSelectedRow {
+            table.deselectRow(at: index, animated: true)            
+        }
+    }
+    
     //
     // UITableView DataSource
     //

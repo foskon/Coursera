@@ -29,6 +29,18 @@ class ViewController: UIViewController, SongsTableDelegate {
         songPlaying.setSong(song: song)
     }
     
+    @IBAction func didTouchPlay() {
+        player.play()
+    }
+    
+    @IBAction func didTouchStop() {
+        player.stop()
+    }
+    
+    @IBAction func didTouchPause() {
+        player.pause()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if (segue.identifier == "SongsTable") {
