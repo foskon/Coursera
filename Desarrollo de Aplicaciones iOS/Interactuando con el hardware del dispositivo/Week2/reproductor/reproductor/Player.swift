@@ -18,15 +18,14 @@ protocol Player {
 class PlayerAVFoundation: Player {
     
     var player: AVAudioPlayer!
+
     
     init() {
         self.player = AVAudioPlayer()
     }
     
     // Player
-    internal func stop() {
-        
-    }
+    internal func stop() {}
     
     internal func play(song: Song) {
         do {

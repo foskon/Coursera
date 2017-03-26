@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="200" id="lhv-ya-HLX"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="ltB-kj-hyp" kind="embed" id="AXG-9G-7aO"/>
+                                    <segue destination="ltB-kj-hyp" kind="embed" identifier="SongsTable" id="AXG-9G-7aO"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -52,6 +52,7 @@
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="ltB-kj-hyp" id="KfI-ct-Oft"/>
+                                    <outlet property="delegate" destination="ltB-kj-hyp" id="ZGK-9w-6Cj"/>
                                 </connections>
                             </tableView>
                         </subviews>

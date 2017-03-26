@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Song {
+class Song: CustomStringConvertible {
     
     private let title: String
     private let path: URL
@@ -24,5 +24,9 @@ class Song {
     
     func getTitle() -> String {
         return title
+    }
+    
+    var description: String {
+        return "Title: \(title)"
     }
 }

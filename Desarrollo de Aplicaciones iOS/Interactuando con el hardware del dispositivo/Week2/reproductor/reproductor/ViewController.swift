@@ -8,19 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SongsTableDelegate {
     
     let player = PlayerAVFoundation()
     let songsProvider = SongsProvider()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        player.play(song: songsProvider.getSongs()[0])
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if (segue.identifier == "SongsTable") {
+            let view = segue.destination as! SongsTableVC
+            view.songs = songsProvider.getSongs()
+            view.delegate = self
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //
+    // SongsTable Delegate
+    //
+    
+    func didSelectSong(song: Song) {
+        player.play(song: song)
     }
 }

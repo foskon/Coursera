@@ -8,11 +8,17 @@
 
 import UIKit
 
-class SongsTableVC: UIViewController, UITableViewDataSource {
+protocol SongsTableDelegate {
+    
+    func didSelectSong(song: Song)
+}
+
+class SongsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table: UITableView!
     
-    let songs = SongsProvider().getSongs()
+    var delegate: SongsTableDelegate!
+    var songs: [Song]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +26,13 @@ class SongsTableVC: UIViewController, UITableViewDataSource {
         table.register(SongCell.self, forCellReuseIdentifier: SongCell.identifier)
     }
     
+    //
+    // UITableView DataSource
+    //
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return songs != nil ? 1 : 0
+    }
     
-    // UITableViewDataSource
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -34,5 +44,13 @@ class SongsTableVC: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = song.getTitle()
         
         return cell
+    }
+    
+    //
+    // UITableView Delegate
+    //
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate.didSelectSong(song: songs[indexPath.row])
     }
 }
