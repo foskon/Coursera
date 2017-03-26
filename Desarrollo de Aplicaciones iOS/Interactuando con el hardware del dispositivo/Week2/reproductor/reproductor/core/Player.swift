@@ -41,4 +41,8 @@ class PlayerAVFoundation: Player {
     func play() {
         player.play()
     }
+    
+    func setVolume(value: Float) {
+        player.setVolume(value, fadeDuration: 1)
+    }
 }

@@ -48,6 +48,10 @@ class PlayerClient {
         player.stop()
     }
     
+    func setVolume(value: Float) {
+        player.setVolume(value: value)
+    }
+    
     func shuffle() {
         var randomIndex = Int(arc4random_uniform(UInt32(songs.count)))
         if randomIndex == currentIndex {
