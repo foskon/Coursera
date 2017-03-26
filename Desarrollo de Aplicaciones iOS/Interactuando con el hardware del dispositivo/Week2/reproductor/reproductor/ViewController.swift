@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let player = PlayerAVFoundation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let songs = SongsProvider().getSongs()
+        player.play(song: songs[0])
     }
 
     override func didReceiveMemoryWarning() {

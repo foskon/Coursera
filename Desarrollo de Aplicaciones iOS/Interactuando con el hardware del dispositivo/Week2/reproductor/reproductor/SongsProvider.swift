@@ -15,10 +15,10 @@ class SongsProvider {
     init() {
         // Create songs
         guard
-            let song1Data = Bundle.main.path(forResource: "song1", ofType: "mp3"),
-            let song2Data = Bundle.main.path(forResource: "song2", ofType: "mp3"),
-            let song3Data = Bundle.main.path(forResource: "song3", ofType: "mp3"),
-            let song4Data = Bundle.main.path(forResource: "song4", ofType: "mp3") else {
+            let song1Data = Bundle.main.url(forResource: "song1", withExtension: "mp3"),
+            let song2Data = Bundle.main.url(forResource: "song2", withExtension: "mp3"),
+            let song3Data = Bundle.main.url(forResource: "song3", withExtension: "mp3"),
+            let song4Data = Bundle.main.url(forResource: "song4", withExtension: "mp3") else {
                 print("ERROR - Could not load data")
                 fatalError()
         }
